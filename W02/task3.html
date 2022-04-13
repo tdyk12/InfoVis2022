@@ -1,0 +1,36 @@
+<html>
+    <head>
+	<title>W02: Task 02</title>
+    </head>
+    <body>
+  <label>v0:
+    <input type="number" id="v0_x" placeholder="x">
+    <input type="number" id="v0_y" placeholder="y">
+    <input type="number" id="v0_z" placeholder="z">
+  </label><br>
+  <label>v1:
+    <input type="number" id="v1_x" placeholder="x">
+    <input type="number" id="v1_y" placeholder="y">
+    <input type="number" id="v1_z" placeholder="z">
+  </label><br>
+  <label>v2:
+    <input type="number" id="v2_x" placeholder="x">
+    <input type="number" id="v2_y" placeholder="y">
+    <input type="number" id="v2_z" placeholder="z">
+  </label><br>
+  <input type="button" onclick="e()" value="Calc"/>
+	<script src="vec3.js"></script>
+	<script>
+  function e(){
+
+    var v0 = new Vec3( document.getElementById("v0_x").value, document.getElementById("v0_y").value, document.getElementById("v0_z").value );
+    var v1 = new Vec3( document.getElementById("v1_x").value, document.getElementById("v1_y").value, document.getElementById("v1_z").value );
+    var v2 = new Vec3( document.getElementById("v2_x").value, document.getElementById("v2_y").value, document.getElementById("v2_z").value );
+    document.write("v0:("+ v0.x + "," + v0.y + "," + v0.z + ")<br>");
+    document.write("v1:("+ v1.x + "," + v1.y + "," + v1.z + ")<br>");
+    document.write("v2:("+ v2.x + "," + v2.y + "," + v2.z + ")<br>");
+    document.write("Area of Triangle:"+ v0.AreaOfTriangle(v1,v2));
+  }
+	</script>
+    </body>
+</html>
