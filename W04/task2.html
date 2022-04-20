@@ -3,9 +3,9 @@
         <title>W04: Task 2</title>
     </head>
     <body>
-	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script>
-	 var x_padding = 10;
+	 var x_padding = 60;
    var y_padding = 10;
 	 var height = 20;
 	 var svg = d3.select("body").append("svg");
@@ -25,7 +25,7 @@
          .enter()
          .append("text")
          .attr("x", 0)
-         .attr("y", function(d,i){ return y_padding + i * ( height + y_padding ); })
+         .attr("y", function(d,i){ return (i+1) * ( height + y_padding ); })
          .attr("fill", function(d){ return d.color; })
          .text( function(d){ return d.label; });
    };
