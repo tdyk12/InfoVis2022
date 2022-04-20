@@ -1,4 +1,4 @@
-x,y,r,color
+x,y,radius,color
 20,20,10,red
 70,25,20,red
 70,80,15,blue
